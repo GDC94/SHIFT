@@ -94,10 +94,9 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
-  background-color: #000;
+  background-color: #fff;
   font-size: 16px;
   overflow-x: hidden !important;
-  overflow-y: hidden;
   margin: 0;
   padding: 0;
   overscroll-behavior-y: none;
