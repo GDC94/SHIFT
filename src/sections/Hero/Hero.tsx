@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Hero = () => {
   const container = useRef<HTMLElement | null>(null);
@@ -12,8 +12,14 @@ const Hero = () => {
   const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
   return (
     <div className="h-screen overflow-hidden">
-      <motion.div style={{ y }} className="relative h-full bg-black w-[90%] mx-auto">
-        <div className="bg-white h-screen flex items-end justify-end pb-32">
+      <motion.div
+        style={{ y }}
+        className="relative w-[90%] mx-auto h-screen flex flex-col gap-24 justify-end"
+      >
+        <div className="text-5xl w-[600px]">
+          <p>The design and code come together to bring your ideas to life.</p>
+        </div>
+        <div className="bg-white pb-20 flex items-end justify-end">
           <svg
             width="699"
             height="230"

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { MuseoModerno } from "next/font/google";
 
 import "./globals.css";
 
@@ -7,13 +8,18 @@ export const metadata: Metadata = {
   description: "Design Studio",
 };
 
+const museoModerno = MuseoModerno({
+  weight: ["400", "700"], // Escoge los pesos que necesitas
+  subsets: ["latin"], // Escoge el conjunto de caracteres
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html className={museoModerno.className} lang="en" suppressHydrationWarning>
       <head>
         <link
           rel="icon"
